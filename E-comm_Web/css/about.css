@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body{
+    background: linear-gradient(-45deg, #194270, #43C6AC, #24bdd1, #23d5ab);
+    /* background: linear-gradient(to right, #0f7a7e, #11947a, #0a9c9c, #099c7a);  */
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    margin: auto;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container{
+    display: flex;
+    overflow: hidden;
+}
+
+.logo-side{
+    float: left;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo-side img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.description{
+    width: 50%;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.navbar a{
+    padding: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover{
+    color: black;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+}
+
+.text-box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 200px;
+    width: 50%;
+    height: 40vh;
+}
+
+h2{
+    margin-top: 12px;
+    margin-left: 60px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+p{
+    color: white;
+    margin-left: 60px;
+    font-size: 1.26rem;
+    font-weight: 100;
+}
+
+.text-box a{
+    padding: 12px;
+    width: 109px;
+    margin-top: 30px;
+    margin-left: 60px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border-radius: 60px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.text-box a:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+}
+
+.footer{
+    display: flex;
+    margin-top: 140px;
+    width: 100%;
+    height: 5%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.fb, .twitter{
+    height: 100%;
+    width: 5%;
+}
+
+.twitter{
+    margin-right: 70px;
+}
+
+.fb{
+    margin-right: 30px;
+}
+
+.fb a img, .twitter a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.fb a img:hover, .twitter a img:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+}
+
+/* responsiveness along width */
+@media all and (min-width: 1367px){
+    .text-box{
+        margin-top: 200px;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.26rem;
+    }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1366px){
+    .text-box{
+        margin-top: 130px;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width:1024px){
+    .text-box{
+        margin-top: 100px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+}
+
+/* responsiveness along height */
+/* @media (min-aspect-ratio: 1920/1080){
+    
+    h2{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.26rem;
+    }
+}
+
+@media (max-aspect-ratio: 1366/768){
+    .text-box{
+        margin-top: 100px;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+} */

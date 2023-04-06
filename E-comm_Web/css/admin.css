@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+@keyframes fadeIn{
+    0%{
+        transform: translateY(1rem);
+        opacity: 0.2s;
+    }
+}
+
+.empty{
+    padding: 1.5rem;
+    text-align: center;
+    border: #cce7d0;
+    background-color: white;
+    color: #8B0000;
+    font-size: 2rem;
+    border: 1px solid #cce7d0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.56);
+}
+
+.message{
+	position: sticky;
+    align-self:baseline;
+	top: 0;
+	margin: 0 auto;
+    width: 100%;
+	background-color: #194270;
+	display: flex;
+	padding: 2rem;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 10000;
+}
+
+.message span{
+	color: white;
+	font-size: 1.2rem;
+}
+
+.message i{
+	cursor: pointer;
+	color: red;
+	font-size: 1.5rem;
+	transition: all 0.3s ease;
+}
+
+.message i:hover{
+	transform: scale(1.2);
+	transition: all 0.3s ease;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #194270;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.56);
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header .flex .h-logo{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.header .flex .h-logo span{
+    color: #24bdd1;
+}
+
+.header .flex a{
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.header .flex a:hover{
+    color: #24bdd1;
+    transition: all 0.3s ease;
+}
+
+.header .flex .icons div{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.header .flex .icons div:hover{
+    color: #24bdd1;
+    transition: all 0.3s ease;
+}
+
+.header .flex .account-box{
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    width: 30rem;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid #194270;
+    display: none;
+    animation: fadeIn 0.2s linear;
+}
+
+.delete-btn, .btn{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: #24bdd1;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.header .flex .account-box.active{
+    display: inline-block;
+}
+
+.header .flex .account-box .delete-btn:hover{
+    color: #ffbd28;
+}
+
+.header .flex .account-box p{
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 1.5rem;
+}
+
+.header .flex .account-box p span{
+    font-size: 1.5rem;
+    color: #194270;
+    margin-bottom: 1.5rem;
+}
+
+.title{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.dashboard .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.dashboard .box{
+    position: relative;
+    width: 20%;
+    height: 200px;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #194270;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    margin: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-out;
+}
+
+.dashboard .box:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.1);
+}
+
+.dashboard .box-container .box h3{
+    font-size: 4rem;
+    color: #222;
+}
+
+.dashboard .box-container .box p{
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    color: white;
+    background-color: #194270;
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+/* Admin: Products */
+
+.add-products .title{
+    margin: 20px;
+}
+
+.add-products form{
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.16);
+    border: 1px solid #cce7d0;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.add-products form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 1.5rem;
+}
+
+.add-products form input{
+    outline: none;
+    border: none;
+}
+
+.add-products form textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+.add-products form .box{
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 1rem 0;
+    padding: 1.2rem 1.4rem;
+    color: #222;
+    font-size: 1.8rem;
+}
+
+.add-products form .btn:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.show-products .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.show-products .box{
+    position: relative;
+    width: 400px;
+    min-width: 250px;
+    height: 50vh;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    margin: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-out;
+}
+
+.show-products .box-container .box img{
+    height: 60%;
+    object-fit: contain;
+}
+
+.show-products .box:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+
+.show-products .box img{
+    width: 100%;
+}
+
+.show-products .box-container .box .name{
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: #222;
+}
+
+.show-products .box-container .box .price{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #194270;
+}
+
+.show-products .box-container .box .buttons{
+    margin-bottom: 10px;
+}
+
+.show-products .box-container .box .delete-btn{
+    background-color: #8B0000;
+}
+
+.show-products .box-container .box .btn{
+    margin-left: 10px;
+}
+
+.show-products .box-container .box .btn:hover{
+    transform: scale(1.06);
+    transition: all 0.3s ease;
+}
+
+.edit-product-form{
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1200;
+    width: 100%;
+}
+
+.edit-product-form form{
+    width: 50rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.edit-product-form form img{
+    width: 100%;
+}
+
+.edit-product-form form .box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 1.2rem 1.4rem;
+    border: 1px solid #cce7d0;
+    background-color: white;
+    font-size: 1.8rem;
+    color: black;
+    width: 100%;
+    outline: none;
+}
+
+.edit-product-form form .btn{
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.edit-product-form form .btn:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.04);
+}
+
+/* orders */
+.orders .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.orders .box-container .box{
+    width: 400px;
+    height: 60vh;
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid #194270;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.orders .box-container .box form{
+    text-align: center;
+}
+
+.orders .box-container .box p{
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.orders .box-container .box p span{
+    color: #194270;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.orders .box-container .box form select{
+    width: 100%;
+    background-color: whitesmoke;
+    /* border: 1; */
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: black;
+    outline: none;
+    border-radius: 4px;
+}
+
+.orders .box-container .btn{
+    margin: 10px;
+    border: none;
+}
+
+.orders .box-container .delete-btn{
+    background-color: #8B0000;
+}
+
+.orders .box-container .btn:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.users .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.users .box-container .box{
+    text-align: center;
+    width: 20%;
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid #194270;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.users .box-container .box p{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.users .box-container .box p span{
+    color: #194270;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.users .box-container .box .delete-btn{
+    background-color: #8B0000;
+}
+
+.users .box-container .box .delete-btn:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.messages .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.messages .box-container .box{
+    width: 20%;
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid #194270;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.messages .box-container .box p{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.messages .box-container .box p span{
+    color: #194270;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.messages .box-container .box .delete-btn{
+    background-color: #8B0000;
+}
+
+.messages .box-container .box .delete-btn:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
